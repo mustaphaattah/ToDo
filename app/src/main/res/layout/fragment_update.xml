@@ -1,14 +1,51 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
-             xmlns:tools="http://schemas.android.com/tools"
-             android:layout_width="match_parent"
-             android:layout_height="match_parent"
-             tools:context=".fragments.UpdateFragment">
-
-    <!-- TODO: Update blank fragment layout -->
-    <TextView
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:text="@string/hello_blank_fragment"/>
-
-</FrameLayout>
+<androidx.constraintlayout.widget.ConstraintLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="@dimen/my_default_padding"
+        tools:context=".fragments.UpdateFragment">
+    <EditText
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:inputType="textPersonName"
+            android:autofillHints="To Do Item"
+            android:hint="@string/title"
+            android:ems="10"
+            android:id="@+id/update_title_et"
+            android:padding="@dimen/my_default_padding"
+            android:background="@drawable/custom_input"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"/>
+    <Spinner
+            android:layout_width="409dp"
+            android:layout_height="60dp"
+            android:layout_marginTop="8dp"
+            android:padding="@dimen/my_default_padding"
+            android:background="@drawable/custom_input"
+            android:entries="@array/priorities"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:id="@+id/update_priorities_spinner"
+            app:layout_constraintTop_toBottomOf="@+id/update_title_et"/>
+    <EditText
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:inputType="text"
+            android:autofillHints="To Do Item Description"
+            android:layout_marginTop="8dp"
+            android:hint="@string/description"
+            android:gravity="top|start"
+            android:padding="@dimen/my_default_padding"
+            android:background="@drawable/custom_input"
+            android:ems="10"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:id="@+id/update_description_et"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/update_priorities_spinner"/>
+</androidx.constraintlayout.widget.ConstraintLayout>

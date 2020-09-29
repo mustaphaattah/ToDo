@@ -23,6 +23,9 @@ class HomeFragment : Fragment() {
             findNavController().navigate(R.id.action_homeFragment_to_addFragment)
         }
 
+        view.homeLayout.setOnClickListener{
+            findNavController().navigate(R.id.action_homeFragment_to_updateFragment)
+        }
 
         return view
     }
