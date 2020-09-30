@@ -1,4 +1,4 @@
-package com.mtah.todo.backend
+package com.mtah.todo.backend.models
 
 import androidx.room.TypeConverter
 import com.mtah.todo.backend.models.Priority

@@ -2,7 +2,7 @@ package com.mtah.todo.backend.persistence
 
 import android.content.Context
 import androidx.room.*
-import com.mtah.todo.backend.Converter
+import com.mtah.todo.backend.models.Converter
 import com.mtah.todo.backend.models.ToDo
 
 @Database(entities = [ToDo::class], version = 1, exportSchema = false)
